@@ -29,6 +29,8 @@ for questions in lst_of_prompts:
 
 print("Your score is: ", similarityScore)
 
+print("poopy")
+
 # def comparison(answer, dominique_response):
 #     similarity_score = 0
 #     for answers in answer:
