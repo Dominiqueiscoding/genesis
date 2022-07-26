@@ -1,3 +1,5 @@
+from lib2to3.pgen2.pgen import DFAState
+from this import d
 from Quiz_class_file import Quiz_game
 
 prompts = [
@@ -29,7 +31,7 @@ for questions in lst_of_prompts:
 
 print("Your score is: ", similarityScore)
 
-print("poopy")
+print("konrad is so so so so so so so so so so so so so so so so so os os ugly")
 
 # def comparison(answer, dominique_response):
 #     similarity_score = 0
