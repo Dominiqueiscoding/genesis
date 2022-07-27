@@ -1,10 +1,10 @@
 from Quiz_class_file import Quiz_game
 print("Please enter the letter that cooresponds with your answer")
 prompts = [
-    "What food would you most like to eat? \n A popcorn \n B cookies \n C chips    ",
-    "What is your favorite vacation spot? \n A beach \n B mountains \n C desert     ",
-    "What color do you like the best? \n A blue \n B green \n C red     ",
-    "what would you most want to be? \n A loved \n B respected \n C feared     ",
+    "What food would you most like to eat? \n A popcorn \n B cookies \n C chips \n",
+    "What is your favorite vacation spot? \n A beach \n B mountains \n C desert \n",
+    "What color do you like the best? \n A blue \n B green \n C red \n",
+    "what would you most want to be? \n A loved \n B respected \n C feared \n",
 ]
 dominique_response = [
     "B",
