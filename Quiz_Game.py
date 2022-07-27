@@ -1,18 +1,16 @@
-from lib2to3.pgen2.pgen import DFAState
-from this import d
 from Quiz_class_file import Quiz_game
-
+print("Please enter the letter that cooresponds with your answer")
 prompts = [
-    "Question1 \n answera \n answerb \n answerc",
-    "Question2 \n answera \n answerb \n answerc",
-    "Question3 \n answera \n answerb \n answerc",
-    "Question4 \n answera \n answerb \n answerc",
+    "What food would you most like to eat? \n A popcorn \n B cookies \n C chips    ",
+    "What is your favorite vacation spot? \n A beach \n B mountains \n C desert     ",
+    "What color do you like the best? \n A blue \n B green \n C red     ",
+    "what would you most want to be? \n A loved \n B respected \n C feared     ",
 ]
 dominique_response = [
-    "answer1",
-    "answer2",
-    "answer2",
-    "answer4",
+    "B",
+    "B",
+    "B",
+    "A",
 ]
 
 q0 = Quiz_game(prompts[0], dominique_response[0])
@@ -24,34 +22,21 @@ lst_of_prompts = [q0, q1, q2, q3]
 similarityScore = 0
 
 for questions in lst_of_prompts: 
-    questions.answer = input(questions.asking).upper()
-    if questions.answer == questions.dominique_answers:
-        similarityScore += 1
-    print ("You answered: ", questions.answer, " the answer was: ", questions.dominique_answers)
-
-print("Your score is: ", similarityScore)
-
-print("konrad is so so so so so so so so so so so so so so so so so os os ugly")
-
-# def comparison(answer, dominique_response):
-#     similarity_score = 0
-#     for answers in answer:
-#         if answers == dominique_response:
-#             similarity_score += 1
-#         return similarity_score
-
-# def genesis(lst_of_prompts):
-    # for question in lst_of_prompts:
-        # print(question)
-    #     person_answer = input(question.asking)
-    #     answer = question.answer.append(person_answer)
-    #     answer.upper()
-    # def comparison(answer, dominique_response):
-    #     similarity_score = 0
-    #     for answers in answer:
-    #         if answers == dominique_response:
-    #             similarity_score += 1
-    #     return similarity_score
-    # return answer
-
-# genesis(prompts)
+    answer = input(questions.asking).upper()
+    print("your answer is: ", answer)
+    if answer == "A" or answer == "B" or answer == "C":
+        if answer == questions.dominique_answers:
+            similarityScore += 1
+    else:
+        print("You can only respond with a letter, please restart the quiz")
+        break       
+    
+    # print ("You answered: ", answer)
+if similarityScore <= 1 and similarityScore != 0:
+    print("You and Dominique are not similar")
+elif similarityScore <= 3 and similarityScore != 0:
+    print("You and Dominique are kind of similar")
+elif similarityScore >= 4 and similarityScore != 0:
+    print("You and Dominique are the same!")
+else:
+    print("")
