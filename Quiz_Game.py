@@ -40,3 +40,5 @@ elif similarityScore >= 4 and similarityScore != 0:
     print("You and Dominique are the same!")
 else:
     print("")
+
+# Try to incorporate the main function like in json_dumps sample code
