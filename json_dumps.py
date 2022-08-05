@@ -31,5 +31,5 @@ if __name__ == "__main__":
 
     # Uncomment down here to run functions individually
 
-    # file_writer()
-    # file_reader()
+     #file_writer()
+

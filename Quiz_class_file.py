@@ -1,19 +1,32 @@
-# class Quiz_game:
-#     def __init__(self, asking, answer, dominique_answers):
-#         self.asking = asking
-#         self.answer = answer
-#         self.dominique_answers = dominique_answers
 
-'''
-    Probably should not be a seperate Quiz_game per question, you can use a dictionary. 
-    Lets say Tom and Jerry have taken your quiz, couldn't you do a dictionary structured as:
-    {
-        "Dominique" : ["B", "B", "B", "A],
-        "Tom" : ["B", "B", "B", "A],
-        "Jerry" : ["A", "A", "A", "B"]
-    } ?
-''' 
+from questions import prompts
 class Quiz_game:
-    def __init__(self, asking, dominique_answers):
-        self.asking = asking
-        self.dominique_answers = dominique_answers
+    import json
+
+    def __init__(self, asking):
+        self.askings = asking
+
+    def play_quiz(self, asking):
+        print("Please only input a letter \n")
+        player_name = input("Please type your name: \n")
+        responses= {"Dominique" : ["B", "B", "B", "A"]}
+        answer = []
+        for prompt, choices in asking:
+            answer.append(input(prompt, choices).upper())
+            responses[player_name] = answer
+
+
+Quiz_game(prompts)
+
+
+
+
+
+
+
+
+
+
+
+
+
