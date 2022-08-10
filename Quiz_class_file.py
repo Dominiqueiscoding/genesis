@@ -7,24 +7,27 @@ class Quiz_game:
 
     def play_quiz(self, asking):
         player_name = input("Please type your name: \n")
-        responses= {"Dominique" : ["B", "B" , "B", "A"]}
         answer = []
         print("Please enter the letter that cooresponds with your answer choice")
         for prompt, choices in asking.items():
             print(prompt)
             answer.append(input(choices).upper())
-            responses[player_name] = answer
-        def turning_json(self):
+        def json_stuffs(results, filename = "results.json"):
             import json
-            with open('results.json', 'a') as results_json:
-                json.dump(responses, results_json)
-        turning_json(responses)
-
+            with open (filename, "w") as f:
+                json.dump(results, f)
+        with open('results.json') as results_json:
+            import json
+            results = json.load(results_json)
+            results.update({player_name : answer})
+            print(results)
+        json_stuffs(results)
                  
 
 
 starting = Quiz_game(prompts)
 starting.play_quiz(prompts)
+
 
 
 
